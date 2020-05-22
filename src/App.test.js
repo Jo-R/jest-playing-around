@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import App from "./App";
 
-test('renders learn react link', () => {
+// https://testing-library.com/docs/react-testing-library/api#render
+test('renders facebook link', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
+  const linkElement = getByText(/Facebook/i);
   expect(linkElement).toBeInTheDocument();
 });
