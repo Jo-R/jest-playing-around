@@ -32,3 +32,14 @@ exports[`Link changes the class when hovered 3`] = `
   Facebook
 </a>
 `;
+
+exports[`renders facebook link 1`] = `
+<DocumentFragment>
+  <a
+    class="normal"
+    href="http://www.facebook.com"
+  >
+    Facebook
+  </a>
+</DocumentFragment>
+`;

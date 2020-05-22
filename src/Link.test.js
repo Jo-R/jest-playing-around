@@ -8,9 +8,10 @@ const {act} = TestRenderer;
 
 // https://testing-library.com/docs/react-testing-library/api#render
 test('renders facebook link', () => {
-  const { getByText } = render(<Link page="http://www.facebook.com">Facebook</Link>);
+  const { getByText, asFragment } = render(<Link page="http://www.facebook.com">Facebook</Link>);
   const linkElement = getByText(/Facebook/i);
   expect(linkElement).toBeInTheDocument();
+  expect(asFragment()).toMatchSnapshot(); // can do snapshots using asFragment
 });
 
 // snapshot test
